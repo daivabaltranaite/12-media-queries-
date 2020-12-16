@@ -1,0 +1,70 @@
+body {
+  background: rgb(224, 255, 255);
+  margin: 0;
+}
+
+.main {
+  margin: 0 auto;
+}
+
+.text {
+  min-height: 200px;
+  margin: 5px;
+}
+
+@media all and (min-width: 1024px) {
+  /*   ekrano plotis daugiau uz 1024px */
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .text {
+    width: calc((100% / 4) - 10px);
+  }
+}
+
+@media all and (max-width: 1024px) and (min-width: 780px) {
+  /*   ekrano plotis nuo 1024 iki 780 */
+  body {
+    background: rgb(250, 250, 210)
+  }
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  h1 {
+    color: rgb(233, 151, 125);
+  }
+  .text {
+    width: calc((100% / 3) - 10px);
+  }
+}
+
+@media all and (max-width: 780px) and (min-width: 480px) {
+  body {
+    background: rgb(255, 116, 120)
+  }
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  h1 {
+    color: rgb(60, 55, 140);
+  }
+  .text {
+    width: calc((100% / 2) - 10px);
+  }
+}
+
+@media all and (max-width: 480px) {
+  body {
+    background: rgb(173, 216, 230)
+  }
+  h1 {
+    color: rgb(156, 32, 200);
+  }
+  .text {
+    width: calc(100% - 10px);
+    flex-direction: column;
+  }
+}
